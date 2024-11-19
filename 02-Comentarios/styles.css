@@ -1,0 +1,14 @@
+/* Esto es un comentario */
+/* 
+  Alt + shift + a (comando para abrir un comentario)
+
+  Multiples lineas comentadas 
+
+*/
+
+body {
+  background-color: black; /* Se define el color del fondo */
+}
+h1 {
+  color: beige; /* Se define el color del titulo  */
+}
