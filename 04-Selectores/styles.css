@@ -1,0 +1,71 @@
+body {
+  background-color: rgb(54, 164, 168);
+}
+
+/* 
+
+Tipos de Selectores
+
+1. Selectores Basicos
+
+  -Selectores universales
+  -Selectores de Tipo
+
+2. Selectores de Clase
+
+3. Selectores de ID
+
+4. Selectores Combinados
+
+  -Descendientes
+  -Hijo directo
+  -Elemento Adjacente
+  -Hermano general
+
+5. Selectores de Atributos
+
+  -Atributo
+  -Atributo Valor
+
+6. Selectores Avamnzados
+
+  -Pseudo-clases
+  -Pseudo-elementos
+  
+  
+  */
+
+  /* 
+  
+  Selectores Basicos
+  
+  */
+
+  /* 
+  Universal -> Seleccionar todos los elemntos de un documento */
+
+  *{
+    border: 2px solid red;
+    /* Resset Basico */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Selectores de Tipo -> SEleccionan un tipo de elemento en html */
+
+  body {
+    background-color: lemonchiffon;
+  }
+
+  h1 {
+    color: crimson;
+  }
+  
+  p {
+    font-size: 24px;
+  }
+
+  header {
+    background-color: rgb(239, 221, 101);
+  }
