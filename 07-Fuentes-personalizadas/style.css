@@ -1,0 +1,123 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: greenyellow;
+}
+
+p {
+  color: whitesmoke;
+}
+
+/* Fuentes Personalizadas
+
+-Fuentes Externas
+
+Lamamos desde servidores remotos.
+
+Google Fonts
+
+  Es un servicio o catalogo de fuentes que podemos utilizar de manera gratuita en intenet
+
+    -Optimizadas para digital.
+    -Gratuitas (alta calidad y curadas)
+    -Uso comercial
+    -Nos da el codigo de vinculacion para Web 
+
+        https://fonts.google.com/
+
+    1. Seleccionar la fuente y traer el codigo de incrustacion o embedcode al html y lo pegamos dentro de las etiquetas <head>
+
+    2. Definimos las reglas en CSS para los elementos a los qu queremos aplicar. Usamos las propiedades de font-family, font-weight. font-style, para lñas tipografias establecidas
+
+-Fuentes Internas
+
+  Llamamos desde nustro pripio server o carpeta de recursos.
+
+  1. Debemos tener los archivos e una carpeta especifia 
+  2. Formatos comunes son ttf .otf .woff . woff2 etc...
+  3. Declaramos en CSS @font-face
+
+      @font-face {
+        font-family: nombreFuente; // Dos palabras entre ""
+        src: url(ubicacion) format(formato): // Ubicacion y formato entre ""
+      }
+
+*/
+
+/* Tipografias estaticas */
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Elige el grosor o peso de la tipografia */
+  font-style: italic; /* Elige si es italic o cursiva */
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/* Tipografias variables */
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 876;
+  font-style: italic;
+  transition: font-weight 1s ease;
+}
+
+.title:hover {
+  font-weight: 182;
+  transition: font-weight 1s ease;
+}
+
+.text {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 460;
+  font-style: normal;
+}
+
+/* 
+
+Elegir dos fuentes dstintas en google fonts
+Una para titulo 
+Una para el parrafo 
+Crear la regla CSS para cada elemento con selector de id 
+
+NOTA: Comentar los codigos de incrustacion anteriores*/
+
+#title {
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#text {
+  font-family: "Sirin Stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Fuentes Internas */
+
+@font-face {
+  font-family: "Winter-Selfie";
+  src: url("./fonts/Winter-Selfie.otf"), format("otf");
+}
+
+@font-face {
+  font-family: "GROBOLD";
+  src: url("./fonts/GROBOLD.otf"), format("otf");
+}
+
+#title {
+  font-family: "Winter-Selfie", sans-serif;
+}
+
+#text {
+  font-family: "GROBOLD";
+}
