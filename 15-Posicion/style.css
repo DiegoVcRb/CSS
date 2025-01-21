@@ -1,0 +1,171 @@
+/* 
+
+  Position
+
+  Es la propiedad que nos permite posicionar los elementos del html.
+
+  Conceptos imporrantes
+
+    1. Flujo de renderizado: los elementos en html se dibujan se izquierda a derecha y de arriba hacia abajo 
+
+    2. El espacio reservado: Es el espacio que tiene un elemento asignado en el navegador
+
+    3. Elemento posicionado: Es cuando la propiedad "position" tiene un valor distinto a static que es el valor por default.
+
+    4. Stacking Context: Contexto de Apilamiento . Es el orden en el que se superponen o apilan los elementos (capas) en html
+
+  Al posicionar un elemnto se habilitan 5 propiedades que podemos usar para mover ele elemnto en los 3 ejes (x, y, z)
+
+    top -> Mover le elemento desde la parte superior 
+    right -> Movera el elemento desde l aparte derecha
+    botton -> Movera el elemnto desde la parte inferior 
+    left -> Movera el elemento desde la parte izquierda
+
+  *Los elementos tiene su punto de origen (0.0) en la esquina superior izquierda
+  *La distancia a moverse se indica en px y acepta valores negativos
+  *Si a un elemnto le declaramos la propiedad top, botton deja de fincionar.
+  *Si a un elemnto le declaramos la propiedad left, right deja de fincionar.
+
+    z-index: Nos permite mover el elemento en el contexto de apilamiento. Recibe valores en numeros o indices . sin unidad. ´Puede recibir valores negativos.
+
+  Los posibles valores que position recibe son: 
+  
+    static -> Es el valor por default de los elemntos. Con este valor el elemento NO ESTA POSICIONADO y no podemos moverlo.
+
+    relative -> El elemento mantiene su posicion y medidas en el flujo del renderizado. Si lo movemos usará su contenedor como referencia.
+
+    absolute -> El elemento perdera sus medidas y su espacio reservado. Si movemos elelemento lo hara en funcion de su contenedor posicionado y si no tiene alguno, lo hara en funcion del elemento html.
+
+    fixed -> El elemnto perdera sus medidas y su espacio reservado si lo movemos usara el elemento html como referencia y quedara fijo en esa posicion aunque hagamos scroll.
+
+    sticky -> Es una mezcla de "reative" y "fixed". Con este valor la propiedades top, bottom y left, no sirven para indicarle en que punto pasará a tener un comportamiento a fixed.
+
+
+*/
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+body {
+font-family: sans-serif;
+color: whitesmoke;
+background-color: rgb(152, 5, 5);
+}
+
+.container {
+margin: 0 auto;
+width: 300px;
+height: 300px;
+background-color: darkkhaki;
+}
+.box {
+width: 100px;
+height: 100px;
+}
+
+.box-1 {
+position: relative;
+/* top: 20px;
+left: 20px; */
+right: -20px;
+bottom: -20px;
+z-index: 2;
+background-color: greenyellow;
+}
+
+.box-2 {
+position: relative;
+left: 50px;
+top: -25;
+z-index: 1;
+background-color: rgb(59, 183, 245);
+}
+
+.box-3 {
+position: absolute;
+/* right: 0;
+bottom: 0; */
+top: 100px;
+left: 0;
+z-index: 15;
+background-color: rgb(162, 75, 242);
+}
+.box-4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 40;
+  width: 100%;
+background-color: rgb(242, 246, 8);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20px;
+
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: bisque;
+}
+
+nav a {
+  font-size: 18px;
+  display: inline-block;
+  padding: 12px 0px;
+  text-decoration: none;
+  color: rgb(6, 8, 9);
+}
+
+nav a.hover {
+  text-decoration: underline;
+}
+
+.button {
+position: fixed;
+right: 20px;
+bottom: 20px;
+z-index: 10px;
+width: 100px;
+height: 100px;
+font-size: 48px;
+text-align: center;
+padding-top: 18px;
+border-radius: 50%;
+background-color: green;
+cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(31, 255, 31);
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: rgb(0, 123, 92);
+}
+
+main section {
+  padding: 0 24px;
+}
+
+section h2 {
+  position: sticky;
+  top: 50px;
+  font-size: 34px;
+  background-color: chocolate;
+}
+
+section p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
